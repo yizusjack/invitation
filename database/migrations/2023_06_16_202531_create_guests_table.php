@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name_g');
+            $table->integer('tickets_g');
+            $table->integer('table_g')->default(0);
+            $table->boolean('confirmed_g')->default(false);
+            $table->foreignId('events_id')->constrained();
         });
     }
 
