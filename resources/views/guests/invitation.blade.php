@@ -66,7 +66,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div id="particles-js" class="position-fixed"></div>
     <div class="container position-relative text-center" data-aos="fade-up" data-aos-delay="500">
-      <h3>We're getting married!</h3>
+      <h3 class="topPart">We're getting married!</h3>
       <h1>Mayra</h1>
       <h2>&</h2>
       <h1>Marcos</h1>
@@ -81,13 +81,16 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+        <div class="row ">
+          <div class="d-flex col-lg-6 order-1 order-lg-2 align-items-center" data-aos="fade-left">
+            <img src="{{asset('assets/img/phrase.jpg')}}" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
+          <div class="d-flex col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative align-items-center" data-aos="fade-right">
+            <div>
+              <h1>"Love is not about satring at each other, but starting off in the same direction"</h1>
+              <h3 class="author">-Antoine de Saint-Exupéry</h3>
+            </div>
+            <!--<p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
             </p>
@@ -100,7 +103,7 @@
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            </p>-->
           </div>
         </div>
 

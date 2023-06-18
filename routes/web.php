@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resource('guest', GuestController::class);

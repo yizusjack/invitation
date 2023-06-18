@@ -242,7 +242,7 @@
 
 let play = document.getElementById("playButton");
 let state = 0;
-let song = new Audio("assets/music/abcdefg.wav");
+let song = new Audio("/assets/music/abcdefg.wav");
   
   function playMusic(){
     
