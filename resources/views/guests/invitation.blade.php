@@ -89,6 +89,15 @@
             <div>
               <h1>"Love is not about satring at each other, but starting off in the same direction"</h1>
               <h3 class="author">-Antoine de Saint-Exupéry</h3>
+                 <h1>hhh {{$event->date_e}}</h1>
+
+              @php
+                $times = strtotime($event->date_e);
+                //echo $times;
+                $appDate=new DateTime(date('m/d/Y H:i:s', $times));
+                $countdown=$appDate->diff(now());
+                echo($countdown->format('%M') . " " . $countdown->format('%d') . " " . $countdown->format('%H') . " " . $countdown->format('%i') . " " . $countdown->format('%s'));
+              @endphp
             </div>
             <!--<p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
