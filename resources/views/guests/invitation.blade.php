@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
@@ -31,7 +32,7 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
-
+  @livewireStyles
 
   <!-- =======================================================
   * Template Name: Day - v4.10.0
@@ -78,9 +79,8 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="d-flex about align-items-center">
       <div class="container">
-
         <div class="row ">
           <div class="d-flex col-lg-6 order-1 order-lg-2 align-items-center" data-aos="fade-left">
             <img src="{{asset('assets/img/phrase.jpg')}}" class="img-fluid" alt="">
@@ -89,35 +89,24 @@
             <div>
               <h1>"Love is not about satring at each other, but starting off in the same direction"</h1>
               <h3 class="author">-Antoine de Saint-Exupéry</h3>
-                 <h1>hhh {{$event->date_e}}</h1>
-
-              @php
-                $times = strtotime($event->date_e);
-                //echo $times;
-                $appDate=new DateTime(date('m/d/Y H:i:s', $times));
-                $countdown=$appDate->diff(now());
-                echo($countdown->format('%M') . " " . $countdown->format('%d') . " " . $countdown->format('%H') . " " . $countdown->format('%i') . " " . $countdown->format('%s'));
-              @endphp
             </div>
-            <!--<p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>-->
           </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>{{$guest->name_g}}:</h3>
+          <p>We're beyond honored to invite you to our wedding! <br>Check out the countdown!</p>
+          @livewire('countdown', ['date'=>$event->date_e])
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End Cta Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
@@ -253,18 +242,6 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -685,6 +662,7 @@
   <script src="{{asset('assets/js/particles.js')}}"></script>
   <script src="{{asset('assets/js/app.js')}}"></script>
 
+  @livewireScripts
 </body>
 
 </html>

@@ -817,7 +817,7 @@ section h3 .author{
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/countdown.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -826,6 +826,17 @@ section h3 .author{
   color: #fff;
   font-size: 28px;
   font-weight: 700;
+}
+
+.cta h4 {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.cta div {
+  color: #fff;
 }
 
 .cta p {
@@ -849,6 +860,12 @@ section h3 .author{
 .cta .cta-btn:hover {
   background: #cc1616;
   border: 2px solid #cc1616;
+}
+
+@media (max-width: 768px) {
+  .cta h4 {
+    font-size: 28px;
+  }
 }
 
 /*--------------------------------------------------------------
