@@ -20,6 +20,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
@@ -107,6 +110,88 @@
 
       </div>
     </section><!-- End Cta Section -->
+    @php
+      $date=strtotime($event->date_e);
+      $dateT=new DateTime(date('m/d/Y H:i:s', $date));
+    @endphp
+    <section id="information" class="information">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+              <h4 class="fw-bold">
+                @switch($dateT->format('m'))
+                            @case(1)
+                                JANUARY
+                                @break
+                            @case(2)
+                                FEBRUARY
+                                @break
+                            @case(3)
+                                MARCH
+                                @break
+                            @case(4)
+                                APRIL
+                                @break
+                            @case(5)
+                                MAY
+                                @break
+                            @case(6)
+                                JUNE
+                                @break
+                            @case(7)
+                                JULY
+                                @break
+                            @case(8)
+                                AUGUST
+                                @break
+                            @case(9)
+                                SEPTEMBER
+                                @break
+                            @case(10)
+                                OCTOBER
+                                @break
+                            @case(11)
+                                November
+                                @break
+                            @case(12)
+                                DECEMBER
+                                @break
+                            @default
+                                nada
+                        @endswitch
+              </h4>
+              <h1>{{$dateT->format('d')}}</h1>
+              <h4 class="fw-bold">{{$dateT->format('Y')}}</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <i class="fa-solid fa-church info-icon"></i>
+            <h4 class="fw-bold">Religious ceremony</h4>
+            <p class="fw-bold">Capilla del Niño Jesús</p>
+            <p class="fw-bold fst-italic">(Salón la estancia's chapel)</p>
+            <p>{{$event->places->address_p}}</p>
+            <p class="fw-bold">6:00 p.m.</p>
+            <div class="btn-get-started scrollto"><a href="{{$event->places->location_p}}" target="_blank">See location</a></div>
+          </div>
+          <div class="col-lg-6 text-center pt-4 pt-lg-0">
+            <i class="fa-solid fa-champagne-glasses info-icon"></i>
+            <h4 class="fw-bold">Reception</h4>
+            <p class="fw-bold">{{$event->places->name_p}}</p>
+            <p>{{$event->places->address_p}}</p>
+            <br>
+            <p class="fw-bold">7:30 p.m.</p>
+            <br>
+            <div class="btn-get-started scrollto"><a href="{{$event->places->location_p}}" target="_blank">See location</a></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 pt-4 text-center">
+            <h4 class="fw-bold">{{$event->places->city_p}}, {{$event->places->state_p}}</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">

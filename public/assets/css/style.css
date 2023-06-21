@@ -659,6 +659,63 @@ section h3 .author{
   margin-bottom: 0;
 }
 
+/*
+------Information------
+*/
+
+.information{
+  width: 100%;
+  background-color: #CBAC98;
+  position: relative;
+}
+
+.information h1{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 93px;
+  color: #fff;
+}
+
+.information h4{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 27px;
+  color: #6A4227;
+  font-weight: 400;
+}
+
+.info-icon{
+  font-size: 50px;
+  color: #fff;
+}
+
+.information p{
+  font-family: 'Rosarivo', serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+#information .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 10px 28px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#information a{
+  color: #fff;
+}
+
+#information .btn-get-started:hover {
+  background-color: #6A4227;
+  border-color: #6A4227;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
