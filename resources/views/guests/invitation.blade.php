@@ -13,6 +13,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
@@ -191,6 +192,69 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!--TIMELINE SECTION-->
+    <section class="timeline">
+        <div class="timelinecontainer left-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-church itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>Religious ceremony</h2>
+            <p>6:00 p.m.</p>
+          </div>
+        </div>
+
+        <div class="timelinecontainer right-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-champagne-glasses itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>Reception</h2>
+            <p>7:30 p.m.</p>
+          </div>
+        </div>
+
+        <div class="timelinecontainer left-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-heart itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>Entry of idk what</h2>
+            <p>8:00 p.m.</p>
+          </div>
+        </div>
+
+        <div class="timelinecontainer right-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-music itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>Dinner</h2>
+            <p>9:00 p.m.</p>
+          </div>
+        </div>
+
+        <div class="timelinecontainer left-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-music itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>Party</h2>
+            <p>10:00 p.m.</p>
+          </div>
+        </div>
+
+        <div class="timelinecontainer right-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
+          <div class="time-logo text-center">
+            <i class="fa-solid fa-moon itinerary-icon"></i>
+          </div>
+          <div class="textbox">
+            <h2>End of the event</h2>
+            <p>2:00 a.m.</p>
+          </div>
+        </div>
     </section>
 
     <!-- ======= Why Us Section ======= -->
@@ -746,6 +810,8 @@
 
   <script src="{{asset('assets/js/particles.js')}}"></script>
   <script src="{{asset('assets/js/app.js')}}"></script>
+
+  
 
   @livewireScripts
 </body>
