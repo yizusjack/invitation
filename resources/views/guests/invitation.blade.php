@@ -115,6 +115,8 @@
       $date=strtotime($event->date_e);
       $dateT=new DateTime(date('m/d/Y H:i:s', $date));
     @endphp
+
+
     <section id="information" class="information">
       <div class="container">
         <div class="row">
@@ -196,6 +198,7 @@
 
     <!--TIMELINE SECTION-->
     <section class="timeline">
+        <h1 class="text-center">Itinerary</h1>
         <div class="timelinecontainer left-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
           <div class="time-logo text-center">
             <i class="fa-solid fa-church itinerary-icon"></i>
@@ -228,7 +231,7 @@
 
         <div class="timelinecontainer right-c" data-aos="fade-up" data-aos-anchor-placement="center-center">
           <div class="time-logo text-center">
-            <i class="fa-solid fa-music itinerary-icon"></i>
+            <i class="fa-solid fa-utensils itinerary-icon"></i></i>
           </div>
           <div class="textbox">
             <h2>Dinner</h2>
@@ -255,6 +258,46 @@
             <p>2:00 a.m.</p>
           </div>
         </div>
+    </section>
+
+    <!-- =======Confirmation section========== -->
+    <section class="confirmation" id="confirmation">
+      <div class="row">
+        <h1 class="text-center">Confirm your assistance</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <div class="ticket">
+            <i class="fa-solid fa-ticket conf-icon"></i>
+            <p>Pass for {{$guest->tickets_g}} 
+              @if ($guest->tickets_g == 1)
+                  person
+              @else
+                  people
+              @endif
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          @if ($guest->confirmed_g == 0)
+            <p>The most important thing to us is your company, please help us confirming your assistance: </p>
+            <form action="{{route('guest.confirm', $guest)}}" method="POST">
+              @csrf
+              @method('PATCH')
+              <input type="radio" id="yes" name="confirmed_g" value={{true}}>
+              <label for="yes">I'll assist</label><br>
+              <input type="radio" id="no" name="confirmed_g" value=0>
+              <label for="no">I won't assist</label><br>
+              @error('confirmed_g')
+                <p>{{$message}}</p>
+              @enderror
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          @else
+              <p>Thanks for confirm your assistance, we'll be delighted to see you there</p>
+          @endif
+        </div>
+      </div>
     </section>
 
     <!-- ======= Why Us Section ======= -->

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\GuestController;
 
 /*
@@ -30,3 +31,6 @@ Route::middleware([
 });
 
 Route::resource('guest', GuestController::class);
+Route::resource('event', EventController::class);
+
+Route::patch('guest/confirm/{guest}', [GuestController::class, 'confirm'])->name('guest.confirm');

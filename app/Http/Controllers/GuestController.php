@@ -13,7 +13,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        return view('guests.prueba');
+        
     }
 
     /**
@@ -58,6 +58,23 @@ class GuestController extends Controller
     public function update(Request $request, Guest $guest)
     {
         //
+    }
+
+    public function confirm(Request $request, Guest $guest)
+    {
+        $request->validate([
+            'confirmed_g' => ['required', 'boolean'],
+        ]);
+        $request['name_g'] = $guest->name_g;
+        $request['tickets_g'] = $guest->tickets_g;
+        $request['table_g'] = $guest->tickets_g;
+        $request['events_id'] = $guest->events_id;
+
+        //dd($request);
+
+        Guest::where('id', $guest->id)->update($request->except('_token', '_method'));
+        //return redirect()->route('guest.show', $guest) . '/#confirmation';
+        return redirect(route('guest.show', $guest) . '/#confirmation');
     }
 
     /**

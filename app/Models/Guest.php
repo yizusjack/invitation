@@ -15,4 +15,11 @@ class Guest extends Model
     public function events(){
         return $this->belongsTo(Event::class);
     }
+
+    protected $fillable = [
+        'name_g',
+        'tickets_g',
+        'confirmed_g',
+        'events_id',
+    ];
 }

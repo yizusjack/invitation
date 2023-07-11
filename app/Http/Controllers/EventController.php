@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Guest;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -36,7 +37,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $guests = Guest::where('events_id', $event->id)->get();
+        return view('guests.guests-index', compact('event', 'guests'));
     }
 
     /**
@@ -44,7 +46,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        
     }
 
     /**
