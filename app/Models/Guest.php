@@ -19,7 +19,6 @@ class Guest extends Model
     protected $fillable = [
         'name_g',
         'tickets_g',
-        'confirmed_g',
         'events_id',
     ];
 }

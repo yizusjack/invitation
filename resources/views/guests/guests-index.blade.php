@@ -33,8 +33,7 @@
   <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+
 
   @livewireStyles
 
@@ -53,23 +52,9 @@
 
     @livewire('guests-index', ['event' => $event->id])
 
-
-
   </main>
 
-  <!-- Vendor JS Files -->
-  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
-
-  <script src="{{asset('assets/js/particles.js')}}"></script>
-  <script src="{{asset('assets/js/app.js')}}"></script>
+  @livewireScripts
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -77,10 +62,6 @@
     new ClipboardJS('.copy-btn');
   </script>
 
-
-  
-
-  @livewireScripts
 </body>
 
 </html>
