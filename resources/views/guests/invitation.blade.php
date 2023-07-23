@@ -224,7 +224,7 @@
             <i class="fa-solid fa-heart itinerary-icon"></i>
           </div>
           <div class="textbox">
-            <h2>Entry of idk what</h2>
+            <h2>Entry of the couple</h2>
             <p>8:00 p.m.</p>
           </div>
         </div>
@@ -263,10 +263,10 @@
     <!-- =======Confirmation section========== -->
     <section class="confirmation" id="confirmation">
       <div class="row">
-        <h1 class="text-center">Confirm your assistance</h1>
+        <h1 class="text-center mb-2">Confirm your assistance</h1>
       </div>
       <div class="row">
-        <div class="col-lg-4 text-center">
+        <div class="text-center">
           <div class="ticket">
             <i class="fa-solid fa-ticket conf-icon"></i>
             <p>Pass for {{$guest->tickets_g}} 
@@ -278,27 +278,86 @@
             </p>
           </div>
         </div>
-        <div class="col-lg-5">
+      </div>
+      <div class="row m-3">
+        <div class="col-lg-12 text-center">
           @if ($guest->confirmed_g == 0)
             <p>The most important thing to us is your company, please help us confirming your assistance: </p>
-            <form action="{{route('guest.confirm', $guest)}}" method="POST">
-              @csrf
-              @method('PATCH')
-              <input type="radio" id="yes" name="confirmed_g" value={{true}}>
-              <label for="yes">I'll assist</label><br>
-              <input type="radio" id="no" name="confirmed_g" value=0>
-              <label for="no">I won't assist</label><br>
-              @error('confirmed_g')
-                <p>{{$message}}</p>
-              @enderror
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+        </div>
+            <div class="col-lg-12 m-2">
+              <form action="{{route('guest.confirm', $guest)}}" method="POST">
+                @csrf
+                @method('PATCH')
+                <input type="radio" id="yes" name="confirmed_g" value={{true}}>
+                <label for="yes">I'll assist</label><br>
+                <input type="radio" id="no" name="confirmed_g" value=0>
+                <label for="no" class="mt-2">I won't assist</label><br>
+                @error('confirmed_g')
+                  <p>{{$message}}</p>
+                @enderror
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+              </form>
+            </div>
           @else
-              <p>Thanks for confirm your assistance, we'll be delighted to see you there</p>
+            <div class="col-lg-12 m-2">
+              <p>Thanks for confirm your assistance, we'll be delighted to see you there.</p>
+            </div>
           @endif
         </div>
       </div>
     </section>
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="row">
+        <h1>Gift's suggestions</h1>
+      </div>
+      <div class="row m-2">
+        <p>To us, your presence and being able to share this moment with you are the best gifts. However, if you'd like to give us a present here are a couple of options: </p>
+      </div>
+      <div class="row m-2">
+        <h4 class="fw-bold">Envelope's rain</h4>
+        <p>Envelope's rain is the tradition to give cash to the couple inside an envelope on the wedding's day</p>
+        <div class="text-center">
+          <img src="{{asset('assets/img/sobre.png')}}" alt="Envelope + money = love" class="envelope">
+        </div>
+        <h5 class="fw-bold">We appreciate it a lot</h5>
+      </div>
+      <div class="row m-2">
+        <h4 class="fw-bold">Gift's table</h4>
+      </div>
+      <div class="container" data-aos="zoom-in">
+        <div class="row d-flex align-items-center">
+
+          <div class="col-lg-4 col-12">
+            <a href="https://www.sears.com.mx/Mesa-de-Regalos/67167/boda%20" target="_blank">
+              <div>
+                <img src="{{asset('assets/img/Sears.png')}}" class="img-fluid logoimg" alt="Sears logo">
+              </div>
+            </a>
+          </div>
+          
+          <div class="col-lg-4 col-12">
+            <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51149319" target="_blank">
+              <div>
+                <img src="{{asset('assets/img/Liverpool.png')}}" class="img-fluid logoimg" alt="Liverpool logo">
+              </div>
+            </a>
+          </div>
+
+          
+          <div class="col-lg-4 col-12">
+            <a href="https://www.amazon.com.mx/wedding/mayra-barajas-marcos-perez-jalisco-november-2023/registry/2L2PEQDYWXEIJ" target="_blank">
+              <div>
+                <img src="{{asset('assets/img/amazon.png')}}" class="img-fluid logoimg" alt="Amazon logo">
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
@@ -335,40 +394,6 @@
       </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row d-flex align-items-center">
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">

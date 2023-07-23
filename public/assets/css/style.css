@@ -840,7 +840,7 @@ section h3 .author{
 --------------------------------------------------------------*/
 
 .confirmation{
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: #4a3d35;
   position: relative;
   z-index: 1000;
@@ -862,10 +862,25 @@ section h3 .author{
 
 .ticket{
   background-color: #6A4227;
-  margin-left: 90px;
-  margin-right: 90px;
+  margin-left: 35%;
+  margin-right: 35%;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+@media (max-width: 575px) {
+  .ticket{
+    background-color: #6A4227;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .confirmation h1{
+    color: #fff;
+    font-size: 48px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -874,6 +889,77 @@ section h3 .author{
 
 .confirmation form{
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+  background: #CBAC98;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.clients h1{
+  color: #6A4227;
+  font-size: 70px;
+}
+
+.clients p{
+  color: #fff;
+  font-size: 20px;
+}
+
+.clients h4{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 33px;
+  color: #6A4227;
+  font-weight: 400;
+}
+
+.clients h5{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 33px;
+  color: #fff;
+  font-weight: 400;
+}
+
+/*.clients img {
+  width: 50%;
+  filter: grayscale(100);
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.clients img:hover {
+  filter: none;
+  transform: scale(1.2);
+}*/
+
+.clients .logoimg {
+  width: 50%;
+  filter: grayscale(100);
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.clients .logoimg:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+
+.envelope{
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .envelope{
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -923,33 +1009,6 @@ section h3 .author{
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients {
-  background: #f2f2f2;
-  padding: 15px 0;
-  text-align: center;
-}
-
-.clients img {
-  width: 50%;
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-}
-
-.clients img:hover {
-  filter: none;
-  transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-  .clients img {
-    width: 40%;
-  }
-}
 
 /*--------------------------------------------------------------
 # Services
