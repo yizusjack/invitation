@@ -1055,6 +1055,37 @@ section h3 .author{
 }
 
 /*--------------------------------------------------------------
+# dresscode
+--------------------------------------------------------------*/
+
+.dresscode{
+  background: #CBAC98;
+}
+
+.dresscode h1{
+  font-family: "Dancing Script", Sans-serif;
+  color: #6A4227;
+  font-size: 70px;
+}
+
+.dresscode h4{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 33px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.dresscode img{
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .dresscode img{
+    width: 70%;
+  }
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
