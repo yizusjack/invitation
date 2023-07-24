@@ -1,6 +1,6 @@
 <div>
     {{--<h1>{{$countdown->format('%s')}}</h1>--}}
-    <div wire:poll.1000ms class="row text-center">
+    <div wire:poll.1000ms.visible class="row text-center">
         <div class=col-lg-1></div>
         <div class='col-lg-2 col-sm-2'>
             <h4>{{$countdown->format('%M')}}</h4> Months

@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Dancing+Script&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -263,7 +263,7 @@
     <!-- =======Confirmation section========== -->
     <section class="confirmation" id="confirmation">
       <div class="row">
-        <h1 class="text-center mb-2">Confirm your assistance</h1>
+        <h1 class="text-center mb-3">Confirm your assistance</h1>
       </div>
       <div class="row">
         <div class="text-center">
@@ -309,7 +309,7 @@
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
-      <div class="row">
+      <div class="row m-2">
         <h1>Gift's suggestions</h1>
       </div>
       <div class="row m-2">
@@ -324,7 +324,7 @@
         <h5 class="fw-bold">We appreciate it a lot</h5>
       </div>
       <div class="row m-2">
-        <h4 class="fw-bold">Gift's table</h4>
+        <h4 class="fw-bold">Gift's tables</h4>
       </div>
       <div class="container" data-aos="zoom-in">
         <div class="row d-flex align-items-center">
@@ -362,30 +362,67 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
-
+        <div class="row text-center m-2">
+          <h1>Lodging's suggestions</h1>
+        </div>
         <div class="row">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box text-center align-items-center">
+              <span>Hotel Santa Barbara.</span>
+              <h3 class="m-2">Tel: 348 783 3838</h3>
+              <a href="https://goo.gl/maps/orriaX7Mj4RXYxae6" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
+            </div>
+          </div>
 
           <div class="col-lg-4" data-aos="fade-up">
-            <div class="box">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            <div class="box text-center align-items-center">
+              <span>Hotel Centinela Grand.</span>
+              <h3 class="m-2">Tel. 348 783 1192</h3>
+              <a href="https://goo.gl/maps/UMPPKuxJkr84eWQK6" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="box">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box text-center align-items-center">
+              <span>Casa Arandas Hotel-Suits.</span>
+              <h3 class="m-2">Tel. 348 688 3717</h3>
+              <a href="https://goo.gl/maps/mNMgNNuHW1MZ4sir7" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box text-center align-items-center">
+              <span>Jagua Express Hotel.</span>
+              <h3 class="m-2">Tel. 348 784 7519</h3>
+              <a href="https://goo.gl/maps/tK3u1JrjorFUyrLz7" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box text-center align-items-center">
+              <span>Charlotte Hotel Boutique.</span>
+              <h3 class="m-2">Tel. 348 593 4647</h3>
+              <a href="https://goo.gl/maps/bbepLSRJwWrpLguE8" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box text-center align-items-center">
+              <span>Hotel Azul Agave.</span>
+              <h3 class="m-2">Tel. 348 146 2094</h3>
+              <a href="https://goo.gl/maps/La6CA3SjfYzv5xhj9" target="_blank">
+                <button class="btn"><p class="hotelIcon"><i class="fa-solid fa-location-dot"></i> See location</p></button>
+              </a>
             </div>
           </div>
 

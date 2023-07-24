@@ -726,6 +726,7 @@ section h3 .author{
   max-width: 1200px;
 }
 
+
 .timelinecontainer{
   padding: 10px 50px;
   position: relative;
@@ -785,6 +786,7 @@ section h3 .author{
   font-size: 80px;
   padding: 10px;
   margin-bottom: 20px;
+  font-family: "Dancing Script", Sans-serif;
 }
 
 .timeline p{
@@ -847,6 +849,7 @@ section h3 .author{
 }
 
 .confirmation h1{
+  font-family: "Dancing Script", Sans-serif;
   color: #fff;
   font-size: 65px;
 }
@@ -903,6 +906,7 @@ section h3 .author{
 }
 
 .clients h1{
+  font-family: "Dancing Script", Sans-serif;
   color: #6A4227;
   font-size: 70px;
 }
@@ -926,19 +930,6 @@ section h3 .author{
   font-weight: 400;
 }
 
-/*.clients img {
-  width: 50%;
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-}
-
-.clients img:hover {
-  filter: none;
-  transform: scale(1.2);
-}*/
-
 .clients .logoimg {
   width: 50%;
   filter: grayscale(100);
@@ -960,6 +951,22 @@ section h3 .author{
   .envelope{
     width: 100%;
   }
+
+  .clients h1{
+    font-size: 50px;
+  }
+
+  .clients p{
+    font-size: 15px;
+  }
+
+  .clients h4{
+    font-size: 25px;
+  }
+
+  .clients h5{
+    font-size: 25px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -967,6 +974,12 @@ section h3 .author{
 --------------------------------------------------------------*/
 .why-us {
   padding-top: 10px;
+}
+
+.why-us h1{
+  font-family: "Dancing Script", Sans-serif;
+  color: #6A4227;
+  font-size: 70px;
 }
 
 .why-us .box {
@@ -977,31 +990,49 @@ section h3 .author{
 
 .why-us .box span {
   display: block;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 700;
-  color: #ed5b5b;
+  color: #6A4227;
 }
+
 
 .why-us .box h4 {
   font-size: 24px;
   font-weight: 600;
+  font-family: 'Alegreya Sans SC', sans-serif;
   padding: 0;
   margin: 20px 0;
   color: #191919;
 }
 
-.why-us .box p {
-  color: #aaaaaa;
-  font-size: 15px;
+.why-us .box h3 {
+  color: #191919;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
   margin: 0;
   padding: 0;
 }
 
 .why-us .box:hover {
-  background: #cc1616;
-  padding: 30px 30px 70px 30px;
+  background: #CBAC98;
+  /*padding: 30px 30px 70px 30px;*/
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
+
+.why-us button{
+  /*background-color: #6A4227;*/
+  background: #CBAC98;
+  color: #fff;
+  font-size: 23px;
+}
+
+.why-us .hotelIcon{
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
 
 .why-us .box:hover span,
 .why-us .box:hover h4,
@@ -1009,6 +1040,19 @@ section h3 .author{
   color: #fff;
 }
 
+.why-us .box:hover button{
+  background: #6A4227;
+}
+
+.why-us .box button:hover{
+  background-color: #3a271a;
+}
+
+@media (max-width: 768px) {
+  .why-us h1{
+    font-size: 50px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Services
