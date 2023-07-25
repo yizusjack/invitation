@@ -33,9 +33,12 @@
   <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
-
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 
   @livewireStyles
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Day - v4.10.0
@@ -47,13 +50,19 @@
 
 <body>
 
+
+  @livewire('navigation-menu')
   <main class="m-4">
-    <h1>Invitados de {{$event->name_e}}</h1>
+
+    
+    <div class="crud">
+      <h1>Invitados de {{$event->name_e}}</h1>
+    </div>
 
     @livewire('guests-index', ['event' => $event->id])
 
   </main>
-
+  @stack('modals')
   @livewireScripts
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>

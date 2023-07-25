@@ -50,7 +50,7 @@
                 <form action="{{route('guest.destroy', [$event, $guest->id])}}" method="POST">
                   @csrf
                   @method('DELETE')
-                  <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                  <button  class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </form>
               </td>
               <td>

@@ -16,8 +16,8 @@ use App\Http\Controllers\GuestController;
 */
 
 Route::get('/', function () {
-    return view('guests.invitation');
-    //return view('welcome');
+    //return view('guests.invitation');
+    return view('welcome');
 });
 
 Route::middleware([
@@ -31,7 +31,7 @@ Route::middleware([
 });
 
 //Route::resource('guest', GuestController::class);
-Route::resource('event', EventController::class);
+Route::resource('event', EventController::class)->middleware('auth');
 
 Route::get('event/{event}/guest/create', [GuestController::class, 'create'])->name('guest.create');
 Route::post('event/{event}/guest', [GuestController::class, 'store'])->name('guest.store');

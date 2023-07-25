@@ -32,6 +32,11 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.crud h1{
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
