@@ -18,6 +18,7 @@ return new class extends Migration
             $table->boolean('hassits_e');
             $table->integer('numsits_e');
             $table->foreignId('places_id')->constrained();
+            $table->foreignId('users_id')->constrained();
         });
     }
 

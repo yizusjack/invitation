@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use App\Models\Guest;
 use App\Models\Place;
 use Illuminate\Database\Eloquent\Model;
@@ -19,5 +20,9 @@ class Event extends Model
 
     public function guests(){
         return $this->hasMany(Guest::class);
+    }
+
+    public function users(){
+        return $this->belongsTo(User::class);
     }
 }

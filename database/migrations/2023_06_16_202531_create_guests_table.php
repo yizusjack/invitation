@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('tickets_g');
             $table->integer('table_g')->default(0);
             $table->boolean('confirmed_g')->default(false);
-            $table->foreignId('events_id')->constrained();
+            $table->foreignId('events_id')->constrained()->onDelete('cascade');
         });
     }
 
