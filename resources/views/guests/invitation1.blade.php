@@ -175,7 +175,7 @@
             <p class="fw-bold fst-italic">(Salón la estancia's chapel)</p>
             <p>{{$event->places->address_p}}</p>
             <p class="fw-bold">6:00 p.m.</p>
-            <div class="btn-get-started scrollto"><a href="{{$event->places->location_p}}" target="_blank">See location</a></div>
+            <a href="{{$event->places->location_p}}" target="_blank"><div class="btn-get-started scrollto">See location</div></a>
           </div>
           <div class="col-lg-6 text-center pt-4 pt-lg-0">
             <i class="fa-solid fa-champagne-glasses info-icon"></i>
@@ -185,7 +185,7 @@
             <br>
             <p class="fw-bold">7:30 p.m.</p>
             <br>
-            <div class="btn-get-started scrollto"><a href="{{$event->places->location_p}}" target="_blank">See location</a></div>
+            <a href="{{$event->places->location_p}}" target="_blank"><div class="btn-get-started scrollto">See location</div></a>
           </div>
         </div>
         <div class="row">
