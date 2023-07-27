@@ -37,6 +37,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
+        $this->authorize('show', $event);
         $guests = Guest::where('events_id', $event->id)->get();
         return view('guests.guests-index', compact('event', 'guests'));
     }

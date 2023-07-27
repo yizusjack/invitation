@@ -33,10 +33,10 @@ Route::middleware([
 //Route::resource('guest', GuestController::class);
 Route::resource('event', EventController::class)->middleware('auth');
 
-Route::get('event/{event}/guest/create', [GuestController::class, 'create'])->name('guest.create');
-Route::post('event/{event}/guest', [GuestController::class, 'store'])->name('guest.store');
+Route::get('event/{event}/guest/create', [GuestController::class, 'create'])->name('guest.create')->middleware('auth');
+Route::post('event/{event}/guest', [GuestController::class, 'store'])->name('guest.store')->middleware('auth');
 Route::get('event/{event}/guest/{guest}', [GuestController::class, 'show'])->name('guest.show');
-Route::get('event/{event}/guest/{guest}/edit', [GuestController::class, 'edit'])->name('guest.edit');
-Route::patch('event/{event}/guest/{guest}', [GuestController::class, 'update'])->name('guest.update');
-Route::delete('event/{event}/guest/{guest}', [GuestController::class, 'destroy'])->name('guest.destroy');
+Route::get('event/{event}/guest/{guest}/edit', [GuestController::class, 'edit'])->name('guest.edit')->middleware('auth');
+Route::patch('event/{event}/guest/{guest}', [GuestController::class, 'update'])->name('guest.update')->middleware('auth');
+Route::delete('event/{event}/guest/{guest}', [GuestController::class, 'destroy'])->name('guest.destroy')->middleware('auth');
 Route::patch('guest/confirm/{guest}', [GuestController::class, 'confirm'])->name('guest.confirm');

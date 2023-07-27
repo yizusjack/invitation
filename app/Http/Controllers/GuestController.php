@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Guest;
 use Illuminate\Http\Request;
+use Illuminate\Auth\Access\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class GuestController extends Controller
 {
@@ -21,7 +24,9 @@ class GuestController extends Controller
      */
     public function create(Event $event)
     {
+        $this->authorize('add', $event);
         return view('guests.createGuest', compact('event'));
+       
     }
 
     /**
@@ -29,6 +34,7 @@ class GuestController extends Controller
      */
     public function store(Event $event, Request $request)
     {
+        $this->authorize('add', $event);
         $request->validate([
             'name_g' => ['required', 'max:255'],
             'tickets_g' => ['required', 'integer', 'min:1'],
@@ -57,6 +63,7 @@ class GuestController extends Controller
      */
     public function edit(Event $event, Guest $guest)
     {
+        $this->authorize('edit', $event);
         return view('guests.editGuest', compact('event', 'guest'));
     }
 
@@ -65,6 +72,7 @@ class GuestController extends Controller
      */
     public function update(Event $event, Request $request, Guest $guest)
     {
+        $this->authorize('edit', $event);
         $request->validate([
             'name_g' => ['required', 'max:255'],
             'tickets_g' => ['required', 'integer', 'min:1'],
@@ -102,6 +110,7 @@ class GuestController extends Controller
      */
     public function destroy(Event $event, Guest $guest)
     {
+        $this->authorize('delete', $event);
         $guest->delete();
         return redirect()->route('event.show', $event);
     }
