@@ -13,7 +13,7 @@ class GuestsIndex extends Component
     public $event;
     public $nameFilter;
     public $confirmedFilter;
-    public $display=true;
+    public $display=false;
 
     protected $paginationTheme = 'bootstrap';
 

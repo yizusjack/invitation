@@ -51,11 +51,7 @@ class GuestController extends Controller
      */
     public function show(Event $event, Guest $guest)
     {
-        //$event = Event::where('id', '=', $guest->events_id)->with('places')->get();
-        //$event= Event::find($guest->events_id);
-        //$hoy=getdate();
-        //dd($hoy[0]);
-        return view('guests.invitation', compact('guest', 'event'));
+        return view('guests.invitation' . $event->id, compact('guest', 'event'));
     }
 
     /**
