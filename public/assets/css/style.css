@@ -640,6 +640,10 @@ section h3 .author{
   background-color: #CBAC98;
 }
 
+.about h1{
+  font-family: 'Dosis', sans-serif;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 18px;
@@ -936,7 +940,7 @@ section h3 .author{
 }
 
 .clients .logoimg {
-  width: 50%;
+  width: 15%;
   filter: grayscale(100);
   transition: all 0.4s ease-in-out;
   display: inline-block;
@@ -955,6 +959,10 @@ section h3 .author{
 @media (max-width: 768px) {
   .envelope{
     width: 100%;
+  }
+
+  .clients .logoimg {
+    width: 40%;
   }
 
   .clients h1{
@@ -1221,6 +1229,11 @@ section h3 .author{
 @media (max-width: 768px) {
   .cta h4 {
     font-size: 28px;
+  }
+
+  .cta {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/countdownPhone.jpg") fixed center center;
+    background-size: cover;
   }
 }
 

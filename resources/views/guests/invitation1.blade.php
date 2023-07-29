@@ -18,13 +18,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Dancing+Script&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Alegreya+Sans:wght@500&family=Dancing+Script&family=Dosis:wght@200&family=Overpass:wght@200&family=Pinyon+Script&family=Rochester&family=Rosarivo&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -71,7 +65,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div id="particles-js" class="position-fixed"></div>
     <div class="container position-relative text-center" data-aos="fade-up" data-aos-delay="500">
-      <h3 class="topPart">We're getting married!</h3>
+      <h3 class="topPart">Save the date | 11/11/2023</h3>
       <h1>Mayra</h1>
       <h2>&</h2>
       <h1>Marcos</h1>
@@ -91,7 +85,7 @@
           </div>
           <div class="d-flex col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative align-items-center" data-aos="fade-right">
             <div>
-              <h1>"Love is not about satring at each other, but starting off in the same direction"</h1>
+              <h1>"To love is not to look at one another, it is to look, together, in the same direction."</h1>
               <h3 class="author">-Antoine de Saint-Exupéry</h3>
             </div>
           </div>
@@ -329,24 +323,8 @@
       <div class="container" data-aos="zoom-in">
         <div class="row d-flex align-items-center">
 
-          <div class="col-lg-4 col-12">
-            <a href="https://www.sears.com.mx/Mesa-de-Regalos/67167/boda%20" target="_blank">
-              <div>
-                <img src="{{asset('assets/img/Sears.png')}}" class="img-fluid logoimg" alt="Sears logo">
-              </div>
-            </a>
-          </div>
           
-          <div class="col-lg-4 col-12">
-            <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51149319" target="_blank">
-              <div>
-                <img src="{{asset('assets/img/Liverpool.png')}}" class="img-fluid logoimg" alt="Liverpool logo">
-              </div>
-            </a>
-          </div>
-
-          
-          <div class="col-lg-4 col-12">
+          <div class="col-lg-12 col-12">
             <a href="https://www.amazon.com.mx/wedding/mayra-barajas-marcos-perez-jalisco-november-2023/registry/2L2PEQDYWXEIJ" target="_blank">
               <div>
                 <img src="{{asset('assets/img/amazon.png')}}" class="img-fluid logoimg" alt="Amazon logo">
