@@ -42,7 +42,7 @@
                       No
                   @endif
               </td>
-              <td id="cop-{{$guest->id}}">invitation.test/event/{{$event}}/guest/{{$guest->id}}</td>
+              <td id="cop-{{$guest->id}}">www.lovesnnipets.com/event/{{$event}}/guest/{{$guest->id}}</td>
               <td>
                 <a href="{{route('guest.edit', [$event, $guest->id])}}"><button class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button></a>
               </td>
@@ -62,6 +62,11 @@
         </table>
     </div>
     {{$guests->links()}}
+    <div class="row">
+      <p class="text-secondary">{{$confirmed}} confirmados, {{$unconfirmed}} sin confirmar</p>
+    </div>
+
+    <br>
 
     <div class="row">
       <div class="col-1">

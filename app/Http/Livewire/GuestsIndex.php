@@ -23,6 +23,8 @@ class GuestsIndex extends Component
     
     public function render()
     {
+        $confirmed = Guest::where('confirmed_g', 1)->count();
+        $unconfirmed = Guest::where('confirmed_g', 0)->count();
         $guests = Guest::query()
         ->when($this->confirmedFilter, function($query){
             $query->where('confirmed_g', $this->confirmedFilter);
@@ -32,6 +34,6 @@ class GuestsIndex extends Component
         })
         ->where('events_id', $this->event)
         ->paginate(10);
-        return view('livewire.guests-index', compact('guests'));
+        return view('livewire.guests-index', compact('guests', 'confirmed', 'unconfirmed'));
     }
 }
