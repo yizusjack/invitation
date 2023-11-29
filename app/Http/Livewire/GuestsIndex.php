@@ -23,8 +23,12 @@ class GuestsIndex extends Component
     
     public function render()
     {
-        $confirmed = Guest::where('confirmed_g', 1)->count();
-        $unconfirmed = Guest::where('confirmed_g', 0)->count();
+        $confirmed = Guest::where('confirmed_g', 1)
+        ->where('events_id', $this->event)
+        ->count();
+        $unconfirmed = Guest::where('confirmed_g', 0)
+        ->where('events_id', $this->event)
+        ->count();
         $guests = Guest::query()
         ->when($this->confirmedFilter, function($query){
             $query->where('confirmed_g', $this->confirmedFilter);

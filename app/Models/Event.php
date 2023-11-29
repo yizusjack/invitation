@@ -12,6 +12,15 @@ class Event extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'name_e',
+        'date_e',
+        'hassits_e',
+        'numsits_e',
+        'places_id',
+        'users_id',
+    ];
+    
     public $timestamps = false;
 
     public function places(){

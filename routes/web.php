@@ -16,7 +16,7 @@ use App\Http\Controllers\GuestController;
 */
 
 Route::get('/', function () {
-    //return view('guests.invitation');
+    //return view('landing');
     return view('welcome');
 });
 
